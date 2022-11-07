@@ -58,7 +58,7 @@ header {
   gap: 32px;
 }
 
-.card-1 {
+.card {
   padding: 32px 23px;
   text-align: center;
 
@@ -67,7 +67,7 @@ header {
   border-radius: 6px;
 }
 
-.card-1 h2 {
+.card h2 {
   display: flex;
   gap: 16px;
   justify-content: center;
@@ -84,13 +84,13 @@ header {
   color: #f7dd43;
 }
 
-.card-1 h2 span {
+.card h2 span {
   color: #e1e1e6;
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.card-1 ul {
+.card ul {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -98,38 +98,62 @@ header {
   width: 270px;
 }
 
-.card-1 ul li {
+.card ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.card-1 ul li + li {
+.card ul li + li {
   padding-top: 24px;
   border-top: 1px solid #323238;
 }
 
-.card-1 ul li strong {
+.card ul li strong {
   font-weight: 900;
   font-size: 36px;
   line-height: 125%;
 
-  color: #e1e1e6;
+  color: #e1e1e6fb;
 }
 
-.card-1 h2:hover,
-.card-1 ul li strong:hover,
-.card-1 ul li img:hover {
+.card h2:hover,
+.card ul li strong:hover,
+.card ul li figure:hover,
+.info:hover {
   transform: scale(1.1);
 }
 
-.card-1 h2,
-.card-1 ul li strong,
-.card-1 ul li img {
+.card h2,
+.card ul li strong,
+.card ul li figure,
+.info {
   transition: transform 0.3s;
 }
 
-.card-1 {
+.info span {
+  font-weight: 900;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 125%;
+
+  color: #e1e1e6c2;
+}
+
+.card ul li figure figcaption {
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: capitalize;
+  white-space: break-spaces;
+
+  color: #e1e1e6c2;
+}
+
+.card ul li figure {
+  width: 74px;
+}
+
+.card {
   opacity: 0;
   animation: appear 0.2s forwards;
 }
