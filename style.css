@@ -33,7 +33,7 @@ body {
   background-color: #121214;
   background-image: var(--bg);
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
 }
 
@@ -54,8 +54,11 @@ header {
 
 #cards {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 32px;
+  min-width: 700px;
+  max-width: 1200px;
 }
 
 .card {
@@ -171,8 +174,31 @@ header {
 
 @media (min-width: 700px) {
   #cards {
-    max-width: 670px;
+    max-width: 1200px;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    opacity: 0%;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #2f2e2e;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3e3c3c;
   }
 }
